@@ -1,0 +1,4 @@
+ls
+cd /var/apache-jmeter-5.2.1/bin
+ls
+sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -n -t /var/jenkins_home/workspace/JmeterTestes/testes.jmx -l /mnt/reports/JMeter.jtl
