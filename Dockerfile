@@ -36,6 +36,13 @@ RUN tar -zxvf apache-jmeter-5.2.1.tgz
 RUN mv apache-jmeter-5.2.1 /var/
 RUN chown -R jenkins:jenkins /var/apache-jmeter-5.2.1
 
+#Install Nodejs
+RUN apt-get update
+RUN apt-get -y install curl gnupg
+RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
+RUN apt-get -y install nodejs
+RUN npm install
+RUN npm install -g newman
 
 # make jenkins the owner of var
 RUN chown -R jenkins /var/jenkins_home/
